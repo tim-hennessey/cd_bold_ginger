@@ -20,12 +20,13 @@ app.Animation = (function () {
 	// Starts the animation
 	function start() {
 
-		tl.from(hero, .5, {x:'-=300', ease: Sine.easeOut})
-		.from(overlay1, .5, {autoAlpha:0}, "+=.25")
-		.from(overlay2, .5, {autoAlpha:0}, "-=.5")
+		tl.from(hero, .75, {x:'-=300', ease: Sine.easeIn})
+		.from(overlay2, .75, {y:"-250", ease: Sine.easeIn})
+		.from(overlay1, .75, {y:"-250", ease: Sine.easeIn}, "-=.75")
+
 		.from(overlay3, .5, {autoAlpha:0})
 		
-		.from(sticker, .25, {autoAlpha:0, rotation:-18, scale:1.5, ease: Sine.easeOut})
+		.from(sticker, .25, {autoAlpha:0, rotation:-18, scale:1.5, ease: Sine.easeIn}, "+=.5")
 		.from(overlay4, .5, {autoAlpha:0});
 		
 	}
